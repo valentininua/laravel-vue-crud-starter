@@ -7,6 +7,12 @@
                         <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
                         <div class="info-box-content">
+                        
+                            <div id="example-3">
+                                <button v-on:click="say('hi')">Say hi</button>
+                                <button v-on:click="say('what')">Say what</button>
+                            </div>
+       
                             <span class="info-box-text">CPU Traffic</span>
                             <span class="info-box-number">
                             10
@@ -204,9 +210,19 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
+
+    export default  {
+          el: '#example-3',
+          methods: {
+          say: function (message) {
+            alert(message)
+          }
         }
-    }
+    } 
+    
+   // export default {
+   //     mounted() {
+   //         console.log('Component mounted.')
+   //     }
+   // }
 </script>
